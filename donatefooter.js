@@ -1,17 +1,9 @@
 var myPostRender = function(vals) {
     (function ($) {
-      console.log('CloudFlare JS served:');
-        $('.ea-delay-display').show();
-        if ($('.content.thankYou').length){
-            $('#TYAboutGift').show();
-            $('#PrivacyPolicy').hide();
-        }
-        else{
-            var $privacyDiv = $('#PrivacyPolicy').clone();
-            $('.at-form-submit.clearfix').append($privacyDiv);
-            $('.at-form-submit.clearfix #PrivacyPolicy').show();
-            $('#PrivacyPolicy_original').remove();
-        }
+      console.log('TEST2 Branch served:');
+        document.querySelector('.at-markup.HeaderHtml').textContent('TEST2 Dev Branch Served');
+        document.querySelector('.site-header').style.background = 'pink';
+        
     }(jQuery));
 };
 
